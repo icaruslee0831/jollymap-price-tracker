@@ -1,0 +1,26 @@
+name: Price Tracker
+
+on:
+  schedule:
+    # 雖然 GitHub 官方限制最短間隔約 15 分鐘，但我們可以設定每 5 分鐘嘗試一次
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # 允許手動點擊運行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+
+      - name: Run Tracker
+        run: python tracker.py
