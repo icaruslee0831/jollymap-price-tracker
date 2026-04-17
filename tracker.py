@@ -6,8 +6,8 @@ URL = "https://shop.jollymap.com/zh-HK/product/Hasa-RSX-%E7%AC%AC%E4%BA%8C%E4%BB
 TARGET_PRICE = 20000
 
 # Telegram 設定 (如需通知請填寫)
-TELEGRAM_TOKEN = "" 
-TELEGRAM_CHAT_ID = ""
+TELEGRAM_TOKEN = "8671675672:AAGKCFlBRmfBDg2JvPCpDpTTGxiLeRi4UF0" 
+TELEGRAM_CHAT_ID = "6274777766"
 
 def send_telegram_msg(message):
     if TELEGRAM_TOKEN and TELEGRAM_CHAT_ID:
